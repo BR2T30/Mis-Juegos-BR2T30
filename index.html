@@ -1,32 +1,75 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Descargas</title>
     <style>
-        body { background-color: #0f0f0f; color: white; font-family: sans-serif; text-align: center; }
-        table { width: 80%; margin: auto; border-collapse: collapse; background: #1a1a1a; }
-        th, td { padding: 15px; border: 1px solid #333; }
-        .btn { padding: 8px; color: white; text-decoration: none; border-radius: 4px; margin: 2px; display: inline-block; }
+        body { 
+            background-color: #0f0f0f; 
+            color: white; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            padding: 20px;
+        }
+        h1 { color: #00c8ff; }
+        table { 
+            width: 90%; 
+            max-width: 800px; 
+            margin: 20px auto; 
+            border-collapse: collapse; 
+            background: #1a1a1a; 
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td { padding: 15px; border: 1px solid #333; text-align: center; }
+        th { background-color: #252525; color: #00c8ff; }
+        
+        .btn { 
+            padding: 10px 15px; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin: 5px; 
+            display: inline-block; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
         .mediafire { background: #007bff; }
         .mega { background: #d9534f; }
         .drive { background: #28a745; }
+        .btn:hover { opacity: 0.7; transform: scale(1.05); }
     </style>
 </head>
 <body>
-    <h1>?? Lista de Juegos</h1>
+
+    <h1>🎮 Mi Lista de Juegos</h1>
+    <p>Selecciona un servidor para empezar la descarga</p>
+
     <table>
-        <tr>
-            <th>Juego</th>
-            <th>Descargar</th>
-        </tr>
-        <tr>
-            <td>Gta San Andreas PC Version Kapital Sin</td>
-            <td>
-                <a href="https://www.mediafire.com/download/6p626fxa4l6lny5/GTA+San+Andreas.rar" class="btn mediafire">MediaFire</a>
-                <a href="LINK_AQUI" class="btn mega">Mega</a>
-            </td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Nombre del Juego</th>
+                <th>Servidores de Descarga</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Gta San Andreas PC</strong></td>
+                <td>
+                    <!-- Link de MediaFire ya corregido -->
+                    <a href="https://www.mediafire.com/download/6p626fxa4l6lny5/GTA+San+Andreas.rar" target="_blank" class="btn mediafire">MediaFire</a>
+                    
+                    <!-- Link de Mega (Para que lo pongas cuando lo tengas) -->
+                    <a href="#" class="btn mega">Mega</a>
+                </td>
+            </tr>
+        </tbody>
     </table>
+
+    <p style="margin-top: 50px; color: #555;">Página creada por Bruno</p>
+
 </body>
 </html>
