@@ -1,20 +1,54 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Descargas</title>
+    <title>Mis Descargas - BR2T30</title>
     <style>
+        /* Agregamos suavizado de scroll para que cuando hagas clic en el menú se deslice lindo */
+        html {
+            scroll-behavior: smooth;
+        }
         body { 
             background-color: #0f0f0f; 
             color: white; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             text-align: center; 
             padding: 20px;
+            margin: 0;
         }
-        h1 { color: #00c8ff; }
+        h1 { color: #00c8ff; margin-top: 80px; } /* Más espacio arriba para que el menú fijo no lo tape */
+        
+        /* Estilos para el Menú de Apartados */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #1a1a1a;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        nav a {
+            color: #00c8ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Contenedores para cada Apartado */
+        section {
+            padding: 60px 0 20px 0; /* Espaciado para que al clickear no tape el título de la sección */
+            border-bottom: 1px dashed #333;
+        }
+
         table { 
             width: 90%; 
             max-width: 800px; 
@@ -45,29 +79,81 @@
 </head>
 <body>
 
-    <h1>🎮 Mi Lista de Juegos</h1>
-    <p>Selecciona un servidor para empezar la descarga</p>
+    <!-- MENÚ DE APARTADOS (FIJO ARRIBA) -->
+    <nav>
+        <a href="#accion">Acción / Mundo Abierto</a>
+        <a href="#terror">Terror</a>
+        <a href="#carreras">Carreras</a>
+    </nav>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre del Juego</th>
-                <th>Servidores de Descarga</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Gta San Andreas PC</strong></td>
-                <td>
-                    <!-- Link de MediaFire ya corregido -->
-                    <a href="https://www.mediafire.com/download/6p626fxa4l6lny5/GTA+San+Andreas.rar" target="_blank" class="btn mediafire">MediaFire</a>
-                    
-                    <!-- Link de Mega (Para que lo pongas cuando lo tengas) -->
-                    <a href="#" class="btn mega">Mega</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <h1>🎮 Mi Lista de Juegos</h1>
+    <p>Selecciona un apartado en el menú de arriba para ir directo a la categoría.</p>
+
+    <!-- APARTADO 1: ACCIÓN -->
+    <section id="accion">
+        <h2>💥 Acción / Mundo Abierto</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Juego</th>
+                    <th>Servidores de Descarga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Gta San Andreas PC</strong></td>
+                    <td>
+                        <a href="https://www.mediafire.com/download/6p626fxa4l6lny5/GTA+San+Andreas.rar" target="_blank" class="btn mediafire">MediaFire</a>
+                        <a href="#" class="btn mega">Mega</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- APARTADO 2: TERROR -->
+    <section id="terror">
+        <h2>👻 Terror</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Juego</th>
+                    <th>Servidores de Descarga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Silent Hill (Ejemplo)</strong></td>
+                    <td>
+                        <a href="#" class="btn mediafire">MediaFire</a>
+                        <a href="#" class="btn mega">Mega</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- APARTADO 3: CARRERAS -->
+    <section id="carreras">
+        <h2>🏎️ Carreras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Juego</th>
+                    <th>Servidores de Descarga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Need for Speed (Ejemplo)</strong></td>
+                    <td>
+                        <a href="#" class="btn mediafire">MediaFire</a>
+                        <a href="#" class="btn mega">Mega</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
     <p style="margin-top: 50px; color: #555;">Página creada por BR2T30</p>
 
